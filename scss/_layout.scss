@@ -1,0 +1,26 @@
+body {
+	background-color: $bg-color;
+	font-family: $font-family;
+	margin: 0;
+	padding: 0;
+	margin-top: 70px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.sign-in,
+.sign-up {
+	background-image: url('../images/sign-in.png');
+}
+
+.account-logo {
+	display: flex;
+	align-items: center;
+
+	img {
+		width: auto;
+		height: 100px;
+		margin: 10px;
+	}
+}

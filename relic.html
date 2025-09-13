@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./scss/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="./js/game.js" defer></script>
+    <title>Finals Website</title>
+</head>
+<body class="home">
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+              <div class="logo-container">
+                <img id="logo-normal" src="./images/logo.png" alt="Logo" class="logo-normal">
+                <img id="logo-hover" src="./images/logo2.png" alt="Logo" class="logo-hover">
+              </div>
+              <span class="arrow"></span>
+            </div>
+            <div class="container">
+                <div id="dropdown-container">
+                    <div class="content">
+                        <div id="game-list">
+                          <div id="free-category" class="category">
+                            <h2>FREE</h2>
+                            <ul>
+                                <li><a href="itw.html" id="#itw">Into the Wilderness</a></li>
+                                <li><a href="relic.html" id="#relic">Relic</a></li>
+                                <li><a href="hv.html" id="#hv">HollowVille</a></li>
+                                <li><a href="cadence.html" id="#cadence">Cadence</a></li>
+                            </ul>
+                          </div>
+                          <div id="buy-category" class="category">
+                            <h2>BUY</h2>
+                            <ul>
+                              <li><a href="ctd.html" id="#ctd">Critters TD</a></li>
+                              <li><a href="bo.html" id="#bo">Blood Oath</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div id="game-images">
+                          <div id="placeholder-container">
+                            <div class="image-wrapper">
+                              <a href="ctd.html">
+                              <img class="placeholder-image" src="./images/ctd.png" alt="Image 1">
+                                <p>New tower defense game out now</p>
+                              </a>
+                            </div>
+                            <div class="image-wrapper">
+                              <a href="relic.html">
+                              <img class= "placeholder-image" src="./images/relic.png" alt="Image 2">
+                                <p>Upcoming game updates for Relic soon</p>
+                              </a>
+                            </div>
+                          </div>
+                          <div id="game-container">
+                            <img id="itw-image" class="game-image" src="./images/itw.png" alt="Game 1 Image">
+                            <img id="relic-image" class="game-image" src="./images/relic.png" alt="Game 2 Image">
+                            <img id="hv-image" class="game-image" src="./images/hv.png" alt="Game 3 Image">
+                            <img id="cadence-image" class="game-image" src="./images/cadence.png" alt="Game 4 Image">
+                            <img id="bo-image" class="game-image" src="./images/bo.png" alt="Game 5 Image">
+                            <img id="ctd-image" class="game-image" src="./images/ctd.png" alt="Game 6 Image">
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="left-items">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="support.html">Support</a>
+                <a href="downloads.html">Download</a>
+            </div>
+
+            <div class="right-items">
+              <a href="#" class="account-link">
+                <i class="fas fa-user" style="color: #fff; margin-right: 5px;"></i>
+                Account
+              </a>
+              <div class="dropdown-content">
+                  <a href="sign-in.html">Sign In</a>
+                  <a href="sign-up.html">Sign Up</a>
+              </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="relic-section">
+        <div class="gif-container">
+            <img src="./gifs/relic.gif">
+            <a href="download.html"><button class="play-button"><span>PLAY FOR FREE</span></button></a>
+        </div>
+
+        <div class="patch-container">
+          <img src="./images/relicpatch.png">
+          <div class="text-container">
+          <a href="relicpatch.html"><h1>RELIC PATCH NOTES 2.1</h1>
+          <p>05/16/2024</p></a>
+          </div>
+        </div>
+    </div>
+    <footer>
+      <div class="footer-content">
+          <p>&copy; 2024 Crest Games. All rights reserved.</p>
+          <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+      </div>
+    </footer>  
+</body>
+</html>

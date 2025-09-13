@@ -1,0 +1,107 @@
+// Styles for the HV section
+
+#hv-section {
+  background: url(../images/hvbg.png);
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: auto;
+  z-index: 0;
+
+  .gif-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    z-index: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .play-button {
+      position: absolute;
+      bottom: 35vh;
+      left: 50vw;
+      transform: translateX(-50%);
+      padding: 10px 40px;
+      background-color: #ff7b47;
+      color: #373737;
+      border: none;
+      font-family: $font-family;
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #ff8c5f;
+      }
+    }
+  }
+}
+
+#hv-banner {
+  position: relative;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 15vh;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#hv-guide {
+  padding-top: 25vh;
+  padding-bottom: 25vh;
+  width: 100%;
+
+  .guide-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    img {
+      width: auto;
+      height: 450px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      opacity: 0;
+      transform: translateY(100%);
+      animation: fadeInFromBottom 2s ease-out forwards;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px 5px rgb(255, 255, 255);
+      }
+    }
+
+    .image-fade-in {
+      animation-play-state: paused;
+    }
+  }
+
+  &.animate {
+    .guide-container img {
+      animation-play-state: running;
+    }
+  }
+}

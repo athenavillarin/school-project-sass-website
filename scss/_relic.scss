@@ -1,0 +1,90 @@
+// Styles for the Relic section
+
+#relic-section {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: auto;
+  z-index: 0;
+
+  .gif-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    z-index: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .play-button {
+      position: absolute;
+      bottom: 45vh;
+      left: 50vw;
+      transform: translateX(-50%);
+      padding: 10px 40px;
+      background-color: #ff4040;
+      color: $text-color;
+      border: none;
+      font-family: $font-family;
+      font-size: 16px;
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+
+      &:hover {
+        color: $text-color;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #373737;
+        z-index: 0;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease;
+      }
+
+      &:hover::before {
+        transform: translateX(0);
+      }
+
+      span {
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+
+  .patch-container {
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: 50%;
+      margin-right: 5vw;
+      margin-left: 9vw;
+    }
+
+    .text-container h1 {
+      flex: 1;
+      color: $text-color;
+      font-size: x-large;
+      font-weight: 550;
+      letter-spacing: 4px;
+    }
+
+    .text-container p {
+      color: $text-color;
+      font-size: small;
+      letter-spacing: 4px;
+    }
+  }
+}

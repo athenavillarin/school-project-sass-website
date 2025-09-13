@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./scss/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="./js/account.js" defer></script>
+    <title>Sass Website</title>
+</head>
+<body class="sign-in">
+    <header>
+        <div class="account-logo">
+            <img id="logo-normal" src="./images/logo.png" alt="Logo" class="logo-normal">
+        </div>
+    </header>
+
+
+    <div class="sign-in-form">
+        <form id="signInForm" action="#" method="post">
+            <h3>Sign in</h3>
+            <label for="username">USERNAME:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="password">PASSWORD:</label>
+            <input type="password" id="password" name="password" required>
+
+            <div class="sign-in-button-container">
+                <button type="button" onclick="validateForm(this.form)">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            
+            <div class="sign-up-link-container">
+                <a href="sign-up.html">NO ACCOUNT YET?</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

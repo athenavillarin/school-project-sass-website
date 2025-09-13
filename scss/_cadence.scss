@@ -1,0 +1,108 @@
+// Styles for the Cadence section
+
+#cadence-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: auto;
+  z-index: 0;
+
+  .gif-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    z-index: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .play-button {
+      position: absolute;
+      bottom: 40vh;
+      left: 50vw;
+      transform: translateX(-50%);
+      padding: 10px 40px;
+      background-color: #ffd48a;
+      color: #373737;
+      border: none;
+      font-family: $font-family;
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #FDE2B3;
+      }
+    }
+  }
+}
+
+#cadence-songs {
+  background-image: url("../images/cadencesongs.png");
+  padding-bottom: 15vh;
+  padding-top: 5vh;
+  box-shadow: 0px 6px 16px 4px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    color: $text-color;
+    text-align: center;
+  }
+  ul {
+    list-style-type: none;
+    padding: 20px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+    
+    li {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease-in-out;
+      
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      &:nth-child(2n) {
+        background-color: #e0e0e0;
+      }
+      
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      }
+    }
+  }
+  p {
+    margin-top: -3vh;
+    color: $text-color;
+    text-align: center;
+  }
+}
+
+#stopButton {
+  position: absolute;
+  left: 50vw;
+  transform: translateX(-50%);
+  margin-top: 3vh;
+  padding: 10px 60px;
+  background-color: #ffd48a;
+  color: #373737;
+  border: none;
+  font-family: $font-family;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover {
+    background-color: #FDE2B3;
+    cursor: pointer;
+  }
+}
