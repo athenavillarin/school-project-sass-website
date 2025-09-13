@@ -141,7 +141,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 100%;
 }
 .navbar #placeholder-container {
@@ -165,9 +164,10 @@
   font-weight: lighter;
 }
 .navbar .placeholder-image {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
+  width: 300px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 8px;
   margin-bottom: 10px;
 }
@@ -177,24 +177,20 @@
 }
 .navbar #game-container {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 60px;
+  padding: 0 20px;
+  top: 0;
 }
 .navbar #game-container .game-image {
   display: none;
-  height: 320px;
-  width: auto;
-  max-width: 520px;
-  object-fit: cover;
+  height: auto;
+  width: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
-  margin-top: 40px;
 }
 
 .left-items,
@@ -315,6 +311,16 @@ body {
   flex-direction: column;
 }
 
+body.sign-in,
+body.sign-up {
+  margin-top: 0;
+}
+
+header {
+  padding: 0;
+  margin: 0;
+}
+
 .sign-in,
 .sign-up {
   background-image: url("../images/sign-in.png");
@@ -322,12 +328,16 @@ body {
 
 .account-logo {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
 }
 .account-logo img {
   width: auto;
   height: 100px;
-  margin: 10px;
+  margin: 0;
+  display: block;
 }
 
 .dropdown-content {
@@ -376,7 +386,7 @@ body.home {
 }
 #featured-section .image-container .play-button {
   position: absolute;
-  bottom: 35vh;
+  bottom: 50vh;
   left: 23vw;
   transform: translateX(-50%);
   padding: 10px 40px;
@@ -416,7 +426,8 @@ body.home {
 }
 #featured-section .news-container .article-image img {
   max-height: 400px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
 }
@@ -444,7 +455,8 @@ body.home {
 #featured-section .news-container .articles .article img {
   width: 300px;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #featured-section .news-container .articles .article p {
   margin: 0;
@@ -488,10 +500,37 @@ body.home {
   max-width: 100%;
 }
 
+.logo-above-form {
+  width: 100%;
+  text-align: center;
+  margin-top: 60px;
+}
+.logo-above-form img {
+  height: 100px;
+}
+
+.go-home-link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1em;
+  margin: 18px;
+}
+
+.go-home-link i {
+  margin-right: 6px;
+}
+
+.go-home-link:hover {
+  color: #5cd3ff;
+}
+
 .sign-in-form,
 .sign-up-form {
-  max-width: 400px;
-  margin: 50px auto;
+  min-width: 350px;
+  margin: 30px auto;
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
@@ -502,6 +541,11 @@ body.home {
   font-size: x-large;
   font-weight: 600;
   text-align: center;
+}
+
+.sign-in-link-container a:hover,
+.sign-up-link-container a:hover {
+  color: #5cd3ff;
 }
 
 form {
@@ -522,7 +566,7 @@ input[type=password] {
   margin-bottom: 15px;
   border: 1px solid #f1f1f1;
   background-color: #f1f1f1;
-  border-radius: 3px;
+  border-radius: 5px;
   font-size: 14px;
 }
 
@@ -534,11 +578,11 @@ input[type=password] {
 }
 
 button {
-  padding: 15px 20px;
+  padding: 10px 20px;
   background-color: white;
   color: #ccc;
   border: 1px solid #ccc;
-  border-radius: 20px;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
   transition: background-color 0.3s ease;
@@ -548,11 +592,11 @@ button {
 }
 
 button:disabled {
-  padding: 15px 20px;
+  padding: 10px 20px;
   background-color: white;
   color: #ccc;
   border: 1px solid #ccc;
-  border-radius: 20px;
+  border-radius: 5px;
   cursor: not-allowed;
   font-size: 20px;
   transition: background-color 0.3s ease;
@@ -569,7 +613,6 @@ button i {
 .sign-in-link-container,
 .sign-up-link-container {
   text-align: center;
-  margin-top: 10px;
 }
 
 a {
@@ -924,7 +967,8 @@ a {
   display: block;
   width: 100%;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @keyframes fadeInFromBottom {
@@ -950,7 +994,8 @@ a {
 #hv-guide .guide-container img {
   width: auto;
   height: 450px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   opacity: 0;
@@ -1268,7 +1313,7 @@ body.bo-buy .game-details .buy-now .buy-button:hover {
   background-color: #fff;
   color: #373737;
   border: 1px solid #ccc;
-  border-radius: 20px;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -1488,6 +1533,4 @@ body.bo-buy .game-details .buy-now .buy-button:hover {
 #cafe-features .feature p {
   font-size: 1rem;
   color: white;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

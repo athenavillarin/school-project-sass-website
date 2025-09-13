@@ -49,24 +49,39 @@ document.addEventListener('DOMContentLoaded', () => {
   function validateForm(form) {
     const username = form.elements["username"] ? form.elements["username"].value : form.elements["name"].value;
     const password = form.elements["password"].value;
-  
-    if (username.trim() === "" || password.trim() === "") {
+    const email = form.elements["email"] ? form.elements["email"].value : null;
+    const confirmPassword = form.elements["confirm-password"] ? form.elements["confirm-password"].value : null;
+
+    // Helper function to validate email format
+    function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    // Check for empty fields
+    if (
+      username.trim() === "" ||
+      password.trim() === "" ||
+      (form.id === 'signUpForm' && (email === null || email.trim() === "" || confirmPassword === null || confirmPassword.trim() === ""))
+    ) {
       alert("Please fill out all required fields.");
-    } else {
-      if (form.id === 'signInForm') {
+      return false;
+    }
+
+    // Email format validation for both forms
+    if (email && !isValidEmail(email)) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+
+    if (form.id === 'signInForm') {
+      window.location.href = "home.html";
+    } else if (form.id === 'signUpForm') {
+      if (password !== confirmPassword) {
+        alert("Password and Confirm Password do not match.");
+        return false;
+      } else {
+        alert("Sign Up successful!");
         window.location.href = "home.html";
-      } else if (form.id === 'signUpForm') {
-        const email = form.elements["email"].value;
-        const confirmPassword = form.elements["confirm-password"].value;
-  
-        if (email.trim() === "" || confirmPassword.trim() === "") {
-          alert("Please fill out all required fields.");
-        } else if (password !== confirmPassword) {
-          alert("Password and Confirm Password do not match.");
-        } else {
-          alert("Sign Up successful!");
-          window.location.href = "home.html";
-        }
       }
     }
   }

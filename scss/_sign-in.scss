@@ -1,9 +1,36 @@
+.logo-above-form {
+  width: 100%;
+  text-align: center;
+  margin-top: 60px;
+
+  img {
+    height: 100px;
+  }
+}
+
+.go-home-link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1em;
+  margin: 18px;
+}
+
+.go-home-link i {
+  margin-right: 6px;
+}
+
+.go-home-link:hover {
+  color: #5cd3ff;
+}
 // Sign-in and sign-up styles
 
 .sign-in-form,
 .sign-up-form {
-  max-width: 400px;
-  margin: 50px auto;
+  min-width: 350px;
+  margin: 30px auto;
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
@@ -15,6 +42,12 @@
     text-align: center;
   }
 }
+
+.sign-in-link-container a:hover,
+.sign-up-link-container a:hover {
+  color: #5cd3ff;
+}
+
 
 form {
   display: flex;
@@ -34,7 +67,7 @@ input[type="password"] {
   margin-bottom: 15px;
   border: 1px solid #f1f1f1;
   background-color: #f1f1f1;
-  border-radius: 3px;
+  border-radius: 5px;
   font-size: 14px;
 }
 
@@ -46,11 +79,11 @@ input[type="password"] {
 }
 
 button {
-  padding: 15px 20px;
+  padding: 10px 20px;
   background-color: white;
   color: #ccc;
   border: 1px solid #ccc;
-  border-radius: 20px;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
   transition: background-color 0.3s ease;
@@ -60,11 +93,11 @@ button {
 }
 
 button:disabled {
-  padding: 15px 20px;
+  padding: 10px 20px;
   background-color: white;
   color: #ccc;
   border: 1px solid #ccc;
-  border-radius: 20px;
+  border-radius: 5px;
   cursor: not-allowed;
   font-size: 20px;
   transition: background-color 0.3s ease;
@@ -81,7 +114,6 @@ button i {
 .sign-in-link-container,
 .sign-up-link-container {
   text-align: center;
-  margin-top: 10px;
 }
 
 a {
